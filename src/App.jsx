@@ -1,6 +1,3 @@
-// import logo from './logo.svg';
-// import Greeting from './components/Greeting';
-// import { useState } from 'react';
 import './App.css';
 import React from "react";
 import { Navbar } from "./components/Navbar";
@@ -10,24 +7,22 @@ import GameLobbyPreview from './components/GameLobbyPreview';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 
-
 function App() {
-  // const [count, setCount] = useState(0);
   return (
-    <div>
+    <div className="bg-gray-100 text-gray-800 min-h-screen">
+      {/* Navigation */}
       <Navbar />
-      <HeroBanner />
-      <Features />
-      <GameLobbyPreview />
-      <Testimonials />
+
+      {/* Main content wrapper */}
+      <main className="container mx-auto px-4 py-8 space-y-20">
+        <HeroBanner />
+        <Features />
+        <GameLobbyPreview />
+        <Testimonials />
+      </main>
+
+      {/* Footer */}
       <Footer />
-      {/* <h1>Welcome to React</h1>
-      <Greeting name="Ori" color="blue" />
-      <p> This is your first React Component</p>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button> */}
     </div>
   );
 }
