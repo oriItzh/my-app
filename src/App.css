@@ -1,6 +1,15 @@
 .App {
   text-align: center;
 }
+body {
+  background-color: #111827; /* Tailwind's gray-900 */
+  color: #ffffff; /* White text */
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
 
 .App-logo {
   height: 40vmin;

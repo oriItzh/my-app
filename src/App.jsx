@@ -9,21 +9,14 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="bg-gray-100 text-gray-800 min-h-screen">
-      {/* Navigation */}
-      <Navbar />
-
-      {/* Main content wrapper */}
-      <main className="container mx-auto px-4 py-8 space-y-20">
-        <HeroBanner />
-        <Features />
-        <GameLobbyPreview />
-        <Testimonials />
-      </main>
-
-      {/* Footer */}
-      <Footer />
-    </div>
+<div className="container mx-auto px-4 py-8 space-y-16 text-center">
+  <Navbar />
+  <HeroBanner />
+  <Features />
+  <GameLobbyPreview />
+  <Testimonials />
+  <Footer />
+</div>
   );
 }
 

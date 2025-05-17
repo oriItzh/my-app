@@ -1,26 +1,27 @@
-// components/Features.jsx
-import React from "react";
 import { FaUsers, FaTrophy, FaShieldAlt, FaMobileAlt } from "react-icons/fa";
 
-const features = [
-  { icon: <FaUsers size={30} />, title: "Play with Friends", desc: "Create private tables and invite your friends instantly." },
-  { icon: <FaTrophy size={30} />, title: "Daily Tournaments", desc: "Compete in exciting tournaments every day." },
-  { icon: <FaShieldAlt size={30} />, title: "Fair & Secure", desc: "Enjoy a safe and secure playing environment." },
-  { icon: <FaMobileAlt size={30} />, title: "Multi-device Support", desc: "Play from desktop, tablet or mobile seamlessly." }
-];
-
-export const Features = () => (
-<section className="bg-gray-50 py-16 px-6">
-  <h3 className="text-3xl font-bold text-center mb-10">Why Play With Us?</h3>
-  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-    {/* Each feature */}
-    <div className="bg-white p-6 rounded shadow hover:shadow-lg transition">
-      <FaUsers className="text-blue-600 text-3xl mb-4" />
-      <h4 className="font-bold mb-2">Play with Friends</h4>
-      <p className="text-gray-600">Create private tables and invite your friends instantly.</p>
-    </div>
-    {/* ...rest */}
+export function Features() {
+  return (
+<section className="py-16 px-4">
+  <h3 className="text-3xl font-bold text-center text-white mb-12">Why Play With Us?</h3>
+  <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+    <Feature icon={<FaUsers />} title="Play with Friends" text="Create private tables and invite your friends instantly." />
+    <Feature icon={<FaTrophy />} title="Daily Tournaments" text="Compete in exciting tournaments every day." />
+    <Feature icon={<FaShieldAlt />} title="Fair & Secure" text="Enjoy a safe and secure playing environment." />
+    <Feature icon={<FaMobileAlt />} title="Multi-device Support" text="Play from desktop, tablet or mobile seamlessly." />
   </div>
 </section>
 
-);
+  );
+}
+
+function Feature({ icon, title, text }) {
+  return (
+    <div className="bg-zinc-800 p-6 rounded-2xl shadow hover:shadow-xl transition text-center">
+      <div className="text-4xl text-yellow-400 mb-4">{icon}</div>
+      <h4 className="text-xl font-bold text-white mb-2">{title}</h4>
+      <p className="text-gray-300">{text}</p>
+    </div>
+  );
+}
+
